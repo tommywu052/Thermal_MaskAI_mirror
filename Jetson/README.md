@@ -60,7 +60,7 @@
 15. sudo apt-get update
 16. sudo apt-get install iotedge
 17. sudo nano /etc/iotedge/config.yaml
-18. search for and enter your previously retrieved {CONNECTION_STRING}: device_connection_string: "<ADD DEVICE CONNECTION STRING HERE>"
+18. search for and enter your previously retrieved {CONNECTION_STRING} into the quotations of this line: device_connection_string: "ADD DEVICE CONNECTION STRING HERE"
 19. press ctrl+x, shift+y, ENTER
 20. sudo systemctl restart iotedge
 21. sudo reboot
