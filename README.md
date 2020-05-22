@@ -1,4 +1,4 @@
-# Thermal_MaskAI
+# Thermal_FaceMask_Detection
 
 Everything in this repository will help you setup a thermal-mask-detection system using the hardwares below
 
