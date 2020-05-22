@@ -1,0 +1,3 @@
+pip install azure-iothub-device-client 1.1.7.0 --user
+python -m pip install pynput --user
+pip install azure --user

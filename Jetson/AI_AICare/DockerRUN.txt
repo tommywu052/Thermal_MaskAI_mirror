@@ -1,0 +1,5 @@
+sudo docker run -it --device=/dev/video0 --device=/dev/snd -v /tmp/.X11-unix:/tmp/.X11-unix --rm -e DISPLAY=$DISPLAY matthsueh/maskai
+
+sudo docker run --rm -it --privileged -v /dev:/dev -v /etc/pulse:/etc/pulse --device=/dev/snd -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY matthsueh/maskai
+
+sudo docker run --rm -it --privileged -v /dev:/dev -v /etc/pulse:/etc/pulse --device /dev/snd -e PULSE_SERVER=unix:/run/user/1000/pulse/native -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v /run/user/1000/pulse:/run/user/1000/pulse --name test matthsueh/maskai
