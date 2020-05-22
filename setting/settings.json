@@ -1,0 +1,10 @@
+{
+    "localip": "http://192.168.0.162",
+    "bbox_num": 10,
+    "threshold": 0.1,
+    "iter_per_inf": 2,
+    "ymin": 145,
+    "ymax": 365,
+    "xmin": 205,
+    "xmax": 470
+}
