@@ -1,11 +1,17 @@
-# Thermal_MaskAI
+# MaskAI_On_Jetson_Setup
 
-Hardwares:
-1. Nvidia Jetson Series (Xavier, Nano, TX2 ONLY)
-2. A Host PC (Windows preferably)
-3. A Thermal Camera (FLIR or any other running on GigE interface)
-4. An Optical Camera (USB webcam, or any other USB camera)
-5. An Ethernet Cable
+Steps:
+1. Flash your Nvidia Jetson device with JetPack 4.2.2 (follows the steps in this link): https://developer.nvidia.com/jetpack-422-archive
+2. Open up terminal and modify docker's daemon.json:
+   sudo nano /etc/docker/daemon.json
+   and make sure your daemon.json looks like:
+   {
+       "default-runtime": "nvidia",
+       "runtimes": {
+           "path": "nvidia-container-runtime",
+           "runtimeArgs": []
+       }
+   }
 
 
 
