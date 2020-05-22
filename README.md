@@ -9,5 +9,7 @@ Hardwares:
 4. An Optical Camera (USB webcam, or any other USB camera)
 5. An Ethernet Cable
 
-
+Softwares:
+1. An Azure account and can sign in onto portal.azure.com
+2. Installed python==3.6.x, opencv, flask on HostPC
 
