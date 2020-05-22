@@ -1,5 +1,7 @@
 # Thermal_MaskAI
 
+Everything in this repository will help you setup a thermal-mask-detection system using the hardwares below
+
 Hardwares:
 1. Nvidia Jetson Series (Xavier, Nano, TX2 ONLY)
 2. A Host PC (Windows preferably)
