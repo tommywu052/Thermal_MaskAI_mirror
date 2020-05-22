@@ -4,10 +4,10 @@ Everything in this repository will help you setup a thermal-mask-detection syste
 
 # Hardware Requirements:
 1. Nvidia Jetson Series (Xavier, Nano, TX2 ONLY)
-2. A Host PC (Windows preferably)
+2. A Host PC (Windows preferably, with 2 ethernet ports)
 3. A Thermal Camera (FLIR or any other running on GigE interface)
 4. An Optical Camera (USB webcam, or any other USB camera)
-5. An Ethernet Cable
+5. 2 X Ethernet Cables
 
 # Software Requirements:
 1. An Azure account and can sign in onto portal.azure.com
