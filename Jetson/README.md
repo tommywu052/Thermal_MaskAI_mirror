@@ -9,13 +9,13 @@ Step 2:
 2. Open up ubuntu Terminal
 3. sudo nano /etc/docker/daemon.json
 4. make sure your daemon.json looks like (press ctrl+x ==> shift+y ==> ENTER after modification):
-    {
-        "default-runtime": "nvidia",
-        "runtimes": {
-            "path": "nvidia-container-runtime",
-            "runtimeArgs": []
-        }
+{
+    "default-runtime": "nvidia",
+    "runtimes": {
+        "path": "nvidia-container-runtime",
+        "runtimeArgs": []
     }
+}
 5. sudo systemctl restart docker
 6. Copy repository's entire "AI_AICare" folder into /home/{$user}/
 7. cd /home/{$user}/AI_AICare
