@@ -28,7 +28,7 @@
 8. In the "Container Registry Settings" section of the page, provide your {Login Server} as the ADDRESS, {Username} as NAME and USER NAME, and {Password} as PASSWORD
 9. In the IoT Edge Modules section of the page, select Add
 10. Select "IoT Edge Module" from the drop-down menu, and provide your own module name, and in the "Image URI" section ENTER {Login Server}/{image_name_of_your_choice} (note that this is the container image that you "docker pushed" earlier)
-11. Once that's done, select the "Container Create Options" tab and ENTER these: 
+11. Once that's done, select the "Container Create Options" tab and copy & paste these: 
 {
     "HostConfig": {
         "PortBindings": {
@@ -40,7 +40,7 @@
         }
     }
 }
-12. Finaly, press the "Update" button, then "Review + create" button and then press "Create" after; the Edge module should be up and running
+12. Finally, press the "Update" button, then "Review + create" button and then press "Create" after; the Edge module should be up and running
 
 # Step 4: Install Azure IoTEdge Runtime (On Jetson)
 1. Back on Jetson Device, open up ubuntu Terminal (make sure you have "curl" installed with sudo apt-get install curl)
