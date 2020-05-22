@@ -11,8 +11,9 @@
 5. sudo systemctl restart docker
 6. Copy repository's entire "AI_AICare" folder into /home/{$user}/
 7. cd /home/{$user}/AI_AICare
-8. sudo docker build -t {azure_repository_name}/{image_name_of_your_choice} .
-9. sudo docker push {azure_repository_name}/{image_name_of_your_choice}
+8. sudo docker login {Login Server}, and input your {Username} and {Password} when prompted
+9. sudo docker build -t {Login Server}/{image_name_of_your_choice} .
+10. sudo docker push {Login Server}/{image_name_of_your_choice}
 
 # Step 3: Create an Azure IoTHub, IoTEdge Device and IoTEdge Module
 
