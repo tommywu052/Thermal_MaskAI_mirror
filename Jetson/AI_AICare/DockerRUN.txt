@@ -1,0 +1,1 @@
+sudo docker run --rm -it -p 8001:8001 repository/container_name --no-cache
