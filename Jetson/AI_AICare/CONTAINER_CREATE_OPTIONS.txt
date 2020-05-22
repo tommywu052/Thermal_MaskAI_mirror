@@ -1,0 +1,11 @@
+{
+  "HostConfig": {
+    "PortBindings": {
+      "8001/tcp": [
+        {
+          "HostPort": "8001"
+        }
+      ]
+    }
+  }
+}
