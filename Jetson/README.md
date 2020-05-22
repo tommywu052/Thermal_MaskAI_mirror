@@ -1,7 +1,7 @@
 # MaskAI_On_Jetson_Setup
 # Step 1 (On any computer with network capability): Create an Azure Container Registry for storing our FaceMask_Detection docker container image
 1. This link outlines how to create an Azure ResourceGroup and Azure Container Registry (ACR) using CLI: https://docs.microsoft.com/zh-tw/azure/container-registry/container-registry-get-started-azure-cli (you are fine once you can log into your ACR, you do not have to do everything in the tutorial)
-2. Once ACR is created, go to your ACR on portal.azure.com and copy the {Login Server}, {Username} and {Password}; you will need these later
+2. Once ACR is created, go to your ACR ==> Access Keys (tab) on portal.azure.com and copy the {Login Server}, {Username} and {Password}; you will need these later
 
 # Step 2 (On Jetson): Then we will create the docker FaceMask_Detection docker container image and push it onto the Azure Container Registry created
 1. Flash your Nvidia Jetson device with JetPack 4.2.2 (follow the steps in this link): https://developer.nvidia.com/jetpack-422-archive
