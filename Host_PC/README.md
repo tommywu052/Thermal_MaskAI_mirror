@@ -19,3 +19,5 @@
 # Step 4: Make sure your Jetson device is up and running and execute "python maskai.py" using command line interface
 
 # Step 5: open any browser and go to: "127.0.0.1:8432/video_feed" to view live facial mask detection along with human forehead temperature detection
+
+# IMPORTANT: make sure your thermal camera is set to output "uint16" thermal data array
