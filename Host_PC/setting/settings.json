@@ -6,5 +6,6 @@
     "ymin": 145,
     "ymax": 365,
     "xmin": 205,
-    "xmax": 470
+    "xmax": 470,
+    "jetson_ip": "http://192.168.99.95:8001/upload"
 }
