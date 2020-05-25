@@ -12,7 +12,7 @@ from mvIMPACT.Common import exampleHelper
 # For systems with NO mvDisplay library support
 import ctypes
 from PIL import Image
-import numpy
+import numpy as np
 import cv2
  
 devMgr = acquire.DeviceManager()
@@ -40,12 +40,9 @@ while True:
         if pRequest.isOK:
             # For systems with NO mvDisplay library support
             cbuf = (ctypes.c_char * pRequest.imageSize.read()).from_address(int(pRequest.imageData.read()))
-            channelType = numpy.uint16 if pRequest.imageChannelBitDepth.read() > 8 else numpy.uint8
-            arr = numpy.fromstring(cbuf, dtype = channelType)
-            arr.shape = (pRequest.imageHeight.read(), pRequest.imageWidth.read(), pRequest.imageChannelCount.read())
-            img = Image.fromarray(arr, 'RGB')
-            npimg = numpy.array(img)
-            thermal_img = cv2.cvtColor(npimg, cv2.COLOR_BGR2RGB)
+            channelType = np.uint16 if pRequest.imageChannelBitDepth.read() > 8 else np.uint8
+            thermal_img = np.fromstring(cbuf, dtype = channelType)
+            thermal_img.shape = (pRequest.imageHeight.read(), pRequest.imageWidth.read(), pRequest.imageChannelCount.read())
             cv2.imshow('thermal', thermal_img)
 
         if pPreviousRequest != None:

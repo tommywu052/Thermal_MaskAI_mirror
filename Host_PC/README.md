@@ -10,3 +10,12 @@
 
 1. Install the CCompiler corresponding to your python version (3.6.x ==> MSVC Build Tools 14.2): https://wiki.python.org/moin/WindowsCompilers#Which_Microsoft_Visual_C.2B-.2B-_compiler_to_use_with_a_specific_Python_version_.3F
 2. go to "C:\Program Files\MATRIX VISION\mvIMPACT Acquire\LanguageBindings\Python" and run "compileWrapperCode.bat" as administrator
+
+# Step 3: Setup all hardwares
+1. Connect usb camera (optical) with host computer
+2. Connect thermal camera (GigE interface) with host computer via ethernet cable (set this port to DHCP)
+3. Connect Jetson device with host computer via ethernet cable (set this port to static 192.168.99.10)
+
+# Step 4: Make sure your Jetson device is up and running and execute "python maskai.py" using command line interface
+
+# Step 5: open any browser and go to: "127.0.0.1:8432/video_feed" to view live facial mask detection along with human forehead temperature detection

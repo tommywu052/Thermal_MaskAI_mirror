@@ -111,14 +111,8 @@ def gen():
             if pRequest.isOK:
                 cbuf = (ctypes.c_char * pRequest.imageSize.read()).from_address(int(pRequest.imageData.read()))
                 channelType = np.uint16 if pRequest.imageChannelBitDepth.read() > 8 else np.uint8
-                arr = np.fromstring(cbuf, dtype = channelType)
-                arr.shape = (pRequest.imageHeight.read(), pRequest.imageWidth.read(), pRequest.imageChannelCount.read())
-                if pRequest.imageChannelCount.read() == 1:
-                    img = Image.fromarray(arr)
-                else:
-                    img = Image.fromarray(arr, 'RGB')
-                thermal_img = np.array(img)
-                thermal_img = thermal_img[:,:,0]
+                thermal_img = np.fromstring(cbuf, dtype = channelType)
+                thermal_img.shape = (pRequest.imageHeight.read(), pRequest.imageWidth.read(), pRequest.imageChannelCount.read())
             if pPreviousRequest != None:
                 pPreviousRequest.unlock()
             pPreviousRequest = pRequest
