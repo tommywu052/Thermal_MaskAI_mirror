@@ -53,7 +53,7 @@
 8. **sudo apt update**
 9. **sudo apt install -f moby-engine**
 10. **sudo apt install -f moby-cli**
-11. **sudo mv /var/lib/dpkg/info/* /var/lib/dpkg/info.bak**
+11. **sudo mv /var/lib/dpkg/info/*** **/var/lib/dpkg/info.bak**
 12. **ls -a /var/lib/dpkg/info**
 13. **sudo rm -rf /var/lib/dpkg/info**
 14. **sudo mv /var/lib/dpkg/info.bak /var/lib/dpkg/info**
