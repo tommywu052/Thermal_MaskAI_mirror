@@ -7,10 +7,10 @@ Everything in this repository will help you setup a thermal-mask-detection syste
 2. A Host PC (Windows preferably, with 2 ethernet ports)
 3. A Thermal Camera (FLIR or any other running on GigE interface)
 4. An Optical Camera (USB webcam, or any other USB camera)
-5. 2 X Ethernet Cables
+5. 2*Ethernet Cables
 
 # Software Requirements:
-1. An Azure account and can sign in onto portal.azure.com
+1. An Azure account and can sign in onto [Azure Portal](https://portal.azure.com)
 2. Installed python==3.6.x, opencv, flask on HostPC
 
 # Step 1: Follow the instructions outlined in README of the "Jetson" folder to setup your Jetson Device first
