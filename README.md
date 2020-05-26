@@ -2,7 +2,8 @@
 # Nvida Jetson & Azure IoTEdge
 ![Overall Schematic](/Overall_Schematic.png)
 
-Everything in this repository will help you setup a thermal-mask-detection system using the hardwares below
+This repository contains very detailed steps that will help you setup a thermal-mask-detection system using the hardwares below.
+Maksure you follow everysingle step outlined in various READMEs of this repository.
 
 # Hardware Requirements:
 1. Nvidia Jetson Series (Xavier, Nano, TX2 ONLY)
