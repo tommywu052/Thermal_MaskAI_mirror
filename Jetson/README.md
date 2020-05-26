@@ -1,7 +1,7 @@
 # MaskAI_On_Jetson_Setup
 # Step 1 (On any computer with network capability): Create an Azure ResourceGroup and Container Registry
 1. This [link](https://docs.microsoft.com/zh-tw/azure/container-registry/container-registry-get-started-azure-cli) outlines how to create an **Azure ResourceGroup** and **Azure Container Registry (ACR)** using CLI (you are fine once you can log into your ACR, you do not have to do everything in the tutorial)
-2. Once **ACR** is created, go to your **ACR ==> Access Keys (tab)** on [Azure Portal](portal.azure.com), copy the **{Login Server}**, **{Username}** and **{Password}**; you will need these later
+2. Once **ACR** is created, go to your **ACR ==> Access Keys (tab)** on [Azure Portal](https://portal.azure.com), copy the **{Login Server}**, **{Username}** and **{Password}**; you will need these later
 3. Also, take note of your **{resource group name}** for the ResourceGroup you created earlier
 
 # Step 2 (On Jetson): Create docker container image
@@ -21,7 +21,7 @@
 1. Create an [Azure IoTHub](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-create-using-cli), and remember your **{hub_name}**
 2. Create an EdgeDevice under the IoTHub using Azure CLI with this command: **az iot hub device-identity create --hub-name **{hub_name}** --device-id **myEdgeDevice** --edge-enabled**
 3. Retrieve the **{CONNECTION_STRING}** for your EdgeDevice (this is very important) with this command: **az iot hub device-identity show-connection-string --device-id **myEdgeDevice** --hub-name **{hub_name}****
-4. Next, sign in to your [Azure Portal](portal.azure.com) and navigate to your IoTHub
+4. Next, sign in to your [Azure Portal](https://portal.azure.com) and navigate to your IoTHub
 5. On the left pane, select "IoT Edge" from the menu
 6. Click on your Device ID (i.e. myEdgeDevice)
 7. On the upper bar, select "Set Modules"
