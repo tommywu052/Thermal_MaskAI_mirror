@@ -1,4 +1,4 @@
-# MaskAI_On_Jetson_Setup
+# MaskAI Jetson Setup
 ![Overall Schematic Jetson](/Jetson/Overall_Schematic_Jetson.png)
 
 # Step 1 (PC/Jetson): Create an Azure ResourceGroup and Container Registry
