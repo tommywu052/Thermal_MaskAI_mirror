@@ -1,10 +1,10 @@
 # MaskAI_On_Jetson_Setup
-# Step 1 (On any computer with network capability): Create an Azure ResourceGroup and Container Registry
+# Step 1 (PC/Jetson): Create an Azure ResourceGroup and Container Registry
 1. This [link](https://docs.microsoft.com/zh-tw/azure/container-registry/container-registry-get-started-azure-cli) outlines how to create an **Azure ResourceGroup** and **Azure Container Registry (ACR)** using CLI (you are fine once you can log into your ACR, you do not have to do everything in the tutorial)
 2. Once **ACR** is created, go to your **ACR ==> Access Keys (tab)** on [Azure Portal](https://portal.azure.com), copy the **{Login Server}**, **{Username}** and **{Password}**; you will need these later
 3. Also, take note of your **{resource group name}** for the ResourceGroup you created earlier
 
-# Step 2 (On Jetson): Create docker container image
+# Step 2 (Jetson): Create docker container image
 1. Flash your Nvidia Jetson device with [JetPack 4.2.2](https://developer.nvidia.com/jetpack-422-archive) (follow the steps in this link)
 2. Make sure your Jetson Device is connected to the internet (cable preferably, WiFi not advised), and on the upper right set powermode to 0: MAXN
 3. Open up ubuntu Terminal on our Jetson Device
@@ -17,7 +17,7 @@
 10. **sudo docker build -t {Login Server}/{image_name_of_your_choice} .**
 11. **sudo docker push {Login Server}/{image_name_of_your_choice}**
 
-# Step 3: (On any computer with network capability): Create an Azure IoTHub, IoTEdge Device and IoTEdge Module
+# Step 3: (PC/Jetson): Create an Azure IoTHub, IoTEdge Device and IoTEdge Module
 1. Create an [Azure IoTHub](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-create-using-cli), and remember your **{hub_name}**
 2. Create an EdgeDevice under the IoTHub using Azure CLI with this command: **az iot hub device-identity create --hub-name **{hub_name}** --device-id **myEdgeDevice** --edge-enabled**
 3. Retrieve the **{CONNECTION_STRING}** for your EdgeDevice (this is very important) with this command: **az iot hub device-identity show-connection-string --device-id **myEdgeDevice** --hub-name **{hub_name}****
@@ -42,7 +42,7 @@
 }
 12. Finally, press the "Update" button, then "Review + create" button and then press "Create" after; the Edge module should be up and running
 
-# Step 4: (On Jetson): Install Azure IoTEdge Runtime
+# Step 4: (Jetson): Install Azure IoTEdge Runtime
 1. Back on Jetson Device, open up ubuntu Terminal (make sure you have "curl" installed with **sudo apt-get install curl**)
 2. **curl https://packages.microsoft.com/config/ubuntu/18.04/multiarch/prod.list > ./microsoft-prod.list**
 3. **sudo cp ./microsoft-prod.list /etc/apt/sources.list.d/**
