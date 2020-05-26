@@ -9,7 +9,7 @@
 
 # Step 2 (Jetson): Create docker container image
 1. Flash your Nvidia Jetson device with [JetPack 4.2.2](https://developer.nvidia.com/jetpack-422-archive) (follow the steps in this link)
-2. Make sure your Jetson Device is connected to the internet (cable preferably, WiFi not advised), and on the upper right set powermode to 0: MAXN
+2. Make sure your Jetson Device is connected to the internet (cable preferably, WiFi not advised), and on the upper right set powermode to **0: MAXN**
 3. Open up ubuntu Terminal on our Jetson Device
 4. Edit docker daemon.json:
 ```
