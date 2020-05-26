@@ -1,4 +1,5 @@
-# Thermal FaceMask Detection utilizing Nvida Jetson Azure IoTEdge
+# Thermal FaceMask Detection utilizing:
+# Nvida Jetson & Azure IoTEdge
 ![Overall Schematic](/Overall_Schematic.png)
 
 Everything in this repository will help you setup a thermal-mask-detection system using the hardwares below
