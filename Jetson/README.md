@@ -30,14 +30,16 @@
 
 # Step 3: (PC/Jetson): Create an Azure IoTHub, IoTEdge Device and IoTEdge Module
 1. Create an [Azure IoTHub](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-create-using-cli), and remember your **{hub_name}**
-2. Create an EdgeDevice under the IoTHub using Azure CLI with this command: **az iot hub device-identity create --hub-name **{hub_name}** --device-id **myEdgeDevice** --edge-enabled**
-3. Retrieve the **{CONNECTION_STRING}** for your EdgeDevice (this is very important) with this command: **az iot hub device-identity show-connection-string --device-id **myEdgeDevice** --hub-name **{hub_name}****
+2. Create an EdgeDevice under the IoTHub using **Azure CLI** with this command: 
+   * **az iot hub device-identity create --hub-name **{hub_name}** --device-id **myEdgeDevice** --edge-enabled**
+3. Retrieve the **{CONNECTION_STRING}** for your EdgeDevice (this is very important) with this command: 
+   * **az iot hub device-identity show-connection-string --device-id **myEdgeDevice** --hub-name **{hub_name}****
 4. Next, sign in to your [Azure Portal](https://portal.azure.com) and navigate to your IoTHub
 5. On the left pane, select "IoT Edge" from the menu
 6. Click on your Device ID (i.e. myEdgeDevice)
 7. On the upper bar, select "Set Modules"
 8. In the "Container Registry Settings" section of the page, provide your **{Login Server}** as the ADDRESS, **{Username}** as NAME and USER NAME, and **{Password}** as PASSWORD
-9. In the IoT Edge Modules section of the page, select Add
+9.  In the IoT Edge Modules section of the page, select Add
 10. Select "IoT Edge Module" from the drop-down menu, and provide your own module name, and in the "Image URI" section ENTER **{Login Server}/{image_name_of_your_choice}** (note that this is the container image that you "docker pushed" earlier)
 11. Once that's done, select the "Container Create Options" tab and copy & paste these:
 ```json 
