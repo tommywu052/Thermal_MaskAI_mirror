@@ -73,7 +73,11 @@ az iot hub device-identity show-connection-string --device-id myEdgeDevice --hub
 12.  Finally, press the "Update" button, then "Review + create" button and then press "Create" after; the Edge module should be up and running
 
 # Step 4: (Jetson): Install Azure IoTEdge Runtime
-1. Back on Jetson Device, open up ubuntu Terminal (make sure you have "curl" installed with **sudo apt-get install curl**)
+1. Back on Jetson Device, open up ubuntu Terminal (make sure you have "curl" installed)
+```
+sudo apt-get update
+sudo apt-get install curl
+```
 2. Execute the following to install iotedge runtime, moby-engine and moby-cli
 ```
 curl https://packages.microsoft.com/config/ubuntu/18.04/multiarch/prod.list > ./microsoft-prod.list
@@ -100,7 +104,10 @@ sudo nano /etc/iotedge/config.yaml
 sudo systemctl restart iotedge
 sudo reboot
 ```
-6. After Jetson Device has rebooted, wait for around 15min or so for iotedge, along with the modules running your container image to startup. You can check if everything is up and running by typing **"sudo iotedge list"**
+6. After Jetson Device has rebooted, wait for around 15min or so for iotedge, along with the modules running your container image to startup. You can check if everything is up and running by typing 
+```
+sudo iotedge list
+```
 7. Once everything is up and running (you should see 3 modules running, namely edgeAgent, edgeHub and {your module name}), go to the upper right corner of ubuntu desktop and set ipv4 address of your Jetson Device to "Manual" with IP as: **"192.168.99.95"**, and netmask as: **"24" or "255.255.255.0"**
 8. reboot again and now the Face Mask Detection AI Server on your Jetson Device will run automatically
 ```
