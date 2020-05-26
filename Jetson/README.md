@@ -1,6 +1,6 @@
 # MaskAI_On_Jetson_Setup
 # Step 1 (On any computer with network capability): Create an Azure ResourceGroup and Container Registry
-1. This link outlines how to create an **Azure ResourceGroup** and **Azure Container Registry (ACR)** using CLI: https://docs.microsoft.com/zh-tw/azure/container-registry/container-registry-get-started-azure-cli (you are fine once you can log into your ACR, you do not have to do everything in the tutorial)
+1. This [link](https://docs.microsoft.com/zh-tw/azure/container-registry/container-registry-get-started-azure-cli) outlines how to create an **Azure ResourceGroup** and **Azure Container Registry (ACR)** using CLI (you are fine once you can log into your ACR, you do not have to do everything in the tutorial)
 2. Once ACR is created, go to your ACR ==> Access Keys (tab) on portal.azure.com and copy the **{Login Server}**, **{Username}** and **{Password}**; you will need these later
 3. Also, take note of your **{resource group name}** for the ResourceGroup you created earlier
 
