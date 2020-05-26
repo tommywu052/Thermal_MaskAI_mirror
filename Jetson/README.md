@@ -42,7 +42,7 @@ sudo docker push {Login Server}/{image_name_of_your_choice}
 
 # Step 3: (PC/Jetson): Create an Azure IoTHub, IoTEdge Device and IoTEdge Device Module
 1. Create an [Azure IoTHub](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-create-using-cli), and remember your **{hub_name}**
-2. Create an EdgeDevice under the IoTHub using **Azure CLI** with this command: 
+2. Create an IoTEdge Device under the IoTHub using **Azure CLI** with this command: 
 ```
 az iot hub device-identity create --hub-name {hub_name} --device-id myEdgeDevice --edge-enabled
 ```
