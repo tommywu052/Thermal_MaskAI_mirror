@@ -1,4 +1,4 @@
-# Thermal FaceMask Detection utilizing:
+# Thermal & FaceMask Detection utilizing:
 # Nvida Jetson & Azure IoTEdge
 ![Overall Schematic](/Overall_Schematic.png)
 
