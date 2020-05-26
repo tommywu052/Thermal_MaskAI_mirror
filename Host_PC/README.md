@@ -14,10 +14,12 @@
 # Step 3: Setup all hardwares
 1. Connect usb camera (optical) with host computer
 2. Connect thermal camera (GigE interface) with host computer via ethernet cable (set this port to DHCP)
-3. Connect Jetson device with host computer via ethernet cable (set this port to static 192.168.99.10)
+3. Connect Jetson device with host computer via ethernet cable (set this port to static **192.168.99.10**)
 
-# Step 4: Make sure your Jetson device is up and running and execute "python maskai.py" using command line interface
+# Step 4: Execute Image/Thermal acquisition python code!
+1. Make sure your Jetson device is up and running and execute **"python maskai.py"** using command line interface
 
-# Step 5: open any browser and go to: "127.0.0.1:8432/video_feed" to view live facial mask detection along with human forehead temperature detection
+# Step 5: Start viewing live detection!
+1. open any browser and go to: **"127.0.0.1:8432/video_feed"** to view live facial mask detection along with human forehead temperature detection
 
 # IMPORTANT: make sure your thermal camera is set to output "uint16" thermal data array
