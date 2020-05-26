@@ -14,8 +14,8 @@
 
 # Step 3: Setup all hardwares
 1. Connect usb camera (optical) with host computer
-2. Connect thermal camera (GigE interface) with host computer via ethernet cable (set this port to DHCP)
-3. Connect Jetson device with host computer via ethernet cable (set this port to static **192.168.99.10**)
+2. Connect thermal camera (GigE interface) with host computer via ethernet cable (set this ethernet port to **DHCP**)
+3. Connect Jetson device with host computer via ethernet cable (set this ethernet port to **static 192.168.99.10**)
 
 # Step 4: Execute Image & Thermal acquisition python code!
 1. Make sure your Jetson device is up and running and execute **"python maskai.py"** using command line interface
