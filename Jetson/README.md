@@ -103,6 +103,8 @@ sudo reboot
 6. After Jetson Device has rebooted, wait for around 15min or so for iotedge, along with the modules running your container image to startup. You can check if everything is up and running by typing "sudo iotedge list"
 7. Once everything is up and running (you should see 3 modules running, namely edgeAgent, edgeHub and {your module name}), go to the upper right corner of ubuntu desktop and set ipv4 address of your Jetson Device to "Manual" with IP as: **"192.168.99.95"**, and netmask as: **"24" or "255.255.255.0"**
 8. reboot again and now the Face Mask Detection AI Server on your Jetson Device will run automatically
-
+```
+sudo reboot
+```
 
 
