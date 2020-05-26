@@ -4,7 +4,7 @@
 
 # Step 1: Install mvGenTL_Acquire x86_64 (On Host PC)
 
-1. Install "mvGenTL_Acquire-x86_64-2.37.1.exe" from this [link](http://static.matrix-vision.com/mvIMPACT_Acquire/2.37.1/)
+1. Install **"mvGenTL_Acquire-x86_64-2.37.1.exe"** from this [link](http://static.matrix-vision.com/mvIMPACT_Acquire/2.37.1/)
 
 # Step 2: Build and install python binding package (On Host PC)
 
