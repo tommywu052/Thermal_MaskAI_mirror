@@ -2,9 +2,10 @@
 ![Overall Schematic Jetson](/Jetson/Overall_Schematic_Jetson.png)
 
 # Step 1 (PC/Jetson): Create an Azure ResourceGroup and Container Registry
-1. This [link](https://docs.microsoft.com/zh-tw/azure/container-registry/container-registry-get-started-azure-cli) outlines how to create an **Azure ResourceGroup** and **Azure Container Registry (ACR)** using CLI (you are fine once you can log into your ACR, you do not have to do everything in the tutorial)
-2. Once **ACR** is created, go to your **ACR ==> Access Keys (tab)** on [Azure Portal](https://portal.azure.com), copy the **{Login Server}**, **{Username}** and **{Password}**; you will need these later
-3. Also, take note of your **{resource group name}** for the ResourceGroup you created earlier
+1. Make sure you have [installed Azure CLI](https://docs.microsoft.com/zh-tw/cli/azure/install-azure-cli-windows?view=azure-cli-latest) on Windows
+2. This [link](https://docs.microsoft.com/zh-tw/azure/container-registry/container-registry-get-started-azure-cli) outlines how to create an **Azure ResourceGroup** and **Azure Container Registry (ACR)** using CLI (you are fine once you can log into your ACR, you do not have to do everything in the tutorial)
+3. Once **ACR** is created, go to your **ACR ==> Access Keys (tab)** on [Azure Portal](https://portal.azure.com), copy the **{Login Server}**, **{Username}** and **{Password}**; you will need these later
+4. Also, take note of your **{resource group name}** for the ResourceGroup you created earlier
 
 # Step 2 (Jetson): Create docker container image
 1. Flash your Nvidia Jetson device with [JetPack 4.2.2](https://developer.nvidia.com/jetpack-422-archive) (follow the steps in this link)
