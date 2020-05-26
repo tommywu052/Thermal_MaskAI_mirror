@@ -17,5 +17,6 @@ Maksure you follow every single step outlined in various READMEs of this reposit
 2. Installed python==3.6.x, opencv, flask on HostPC
 
 # Step 1: Follow the instructions outlined in README of the "Jetson" folder to setup your Jetson Device first
+
 # Step 2: Follow the instructions outlined in README of the "Host_PC" folder to setup your HostPC to finalize the solution
 
