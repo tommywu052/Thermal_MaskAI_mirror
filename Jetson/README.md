@@ -10,7 +10,10 @@
 1. Flash your Nvidia Jetson device with [JetPack 4.2.2](https://developer.nvidia.com/jetpack-422-archive) (follow the steps in this link)
 2. Make sure your Jetson Device is connected to the internet (cable preferably, WiFi not advised), and on the upper right set powermode to 0: MAXN
 3. Open up ubuntu Terminal on our Jetson Device
-4. **sudo nano /etc/docker/daemon.json**
+4. Edit docker daemon.json:
+```
+sudo nano /etc/docker/daemon.json
+```
 5. add **"default-runtime": "nvidia"** so the whole thing looks like:
 ```json
 {
@@ -23,12 +26,18 @@
     }
 }
 ```
-6. **sudo systemctl restart docker**
+6. Restart docker
+```
+sudo systemctl restart docker
+```
 7. Copy repository's entire "AI_AICare" folder into **/home/{$user}/**
-8. **cd /home/{$user}/AI_AICare**
-9.  **sudo docker login {Login Server}**, and input your **{Username}** and **{Password}** when prompted
-10. **sudo docker build -t {Login Server}/{image_name_of_your_choice} .**
-11. **sudo docker push {Login Server}/{image_name_of_your_choice}**
+8. Execute the following commands and input your **{Username}** and **{Password}** when prompted
+```
+cd /home/{$user}/AI_AICare
+sudo docker login {Login Server}
+sudo docker build -t {Login Server}/{image_name_of_your_choice} .
+sudo docker push {Login Server}/{image_name_of_your_choice}
+```
 
 # Step 3: (PC/Jetson): Create an Azure IoTHub, IoTEdge Device and IoTEdge Module
 1. Create an [Azure IoTHub](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-create-using-cli), and remember your **{hub_name}**
@@ -61,29 +70,35 @@
 
 # Step 4: (Jetson): Install Azure IoTEdge Runtime
 1. Back on Jetson Device, open up ubuntu Terminal (make sure you have "curl" installed with **sudo apt-get install curl**)
-2. **curl https://packages.microsoft.com/config/ubuntu/18.04/multiarch/prod.list > ./microsoft-prod.list**
-3. **sudo cp ./microsoft-prod.list /etc/apt/sources.list.d/**
-4. **curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg**
-5. **sudo cp ./microsoft.gpg /etc/apt/trusted.gpg.d/**
-6. **sudo mv /var/lib/dpkg/info /var/lib/dpkg/info.bak**
-7. **sudo mkdir /var/lib/dpkg/info**
-8. **sudo apt update**
-9. **sudo apt install -f moby-engine**
-10. **sudo apt install -f moby-cli**
-11. **sudo mv /var/lib/dpkg/info/*** **/var/lib/dpkg/info.bak**
-12. **ls -a /var/lib/dpkg/info**
-13. **sudo rm -rf /var/lib/dpkg/info**
-14. **sudo mv /var/lib/dpkg/info.bak /var/lib/dpkg/info**
-15. **sudo apt-get update**
-16. **sudo apt-get install iotedge**
-17. **sudo nano /etc/iotedge/config.yaml**
-18. search for and enter your previously retrieved **{CONNECTION_STRING}** into the quotations of this line: **device_connection_string: "*ADD DEVICE CONNECTION STRING HERE*"**
-19. press ctrl+x, shift+y, ENTER
-20. **sudo systemctl restart iotedge**
-21. **sudo reboot**
-22. After Jetson Device has rebooted, wait for around 15min or so for iotedge, along with the modules running your container image to startup. You can check if everything is up and running by typing "sudo iotedge list"
-23. Once everything is up and running (you should see 3 modules running, namely edgeAgent, edgeHub and {your module name}), go to the upper right corner of ubuntu desktop and set ipv4 address of your Jetson Device to "Manual" with IP as: **"192.168.99.95"**, and netmask as: **"24" or "255.255.255.0"**
-24. reboot again and now the Face Mask Detection AI Server on your Jetson Device will run automatically
+2. Execute the following to install iotedge runtime, moby-engine and moby-cli
+```
+curl https://packages.microsoft.com/config/ubuntu/18.04/multiarch/prod.list > ./microsoft-prod.list
+sudo cp ./microsoft-prod.list /etc/apt/sources.list.d/
+curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+sudo cp ./microsoft.gpg /etc/apt/trusted.gpg.d/
+sudo mv /var/lib/dpkg/info /var/lib/dpkg/info.bak
+sudo mkdir /var/lib/dpkg/info
+sudo apt update
+sudo apt install -f moby-engine
+sudo apt install -f moby-cli
+sudo mv /var/lib/dpkg/info/* /var/lib/dpkg/info.bak
+ls -a /var/lib/dpkg/info
+sudo rm -rf /var/lib/dpkg/info
+sudo mv /var/lib/dpkg/info.bak /var/lib/dpkg/info
+sudo apt-get update
+sudo apt-get install iotedge
+sudo nano /etc/iotedge/config.yaml
+```
+3. search for and enter your previously retrieved **{CONNECTION_STRING}** into the quotations of this line: **device_connection_string: "*ADD DEVICE CONNECTION STRING HERE*"**
+4. press ctrl+x, shift+y, ENTER
+5. Now, restart iotedge and reboot jetson
+```
+sudo systemctl restart iotedge
+sudo reboot
+```
+23. After Jetson Device has rebooted, wait for around 15min or so for iotedge, along with the modules running your container image to startup. You can check if everything is up and running by typing "sudo iotedge list"
+24. Once everything is up and running (you should see 3 modules running, namely edgeAgent, edgeHub and {your module name}), go to the upper right corner of ubuntu desktop and set ipv4 address of your Jetson Device to "Manual" with IP as: **"192.168.99.95"**, and netmask as: **"24" or "255.255.255.0"**
+25. reboot again and now the Face Mask Detection AI Server on your Jetson Device will run automatically
 
 
 
