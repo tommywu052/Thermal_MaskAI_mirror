@@ -3,7 +3,7 @@
 ![Overall Schematic](/Overall_Schematic.png)
 
 This repository contains very detailed steps that will help you setup a thermal-mask-detection system using the hardwares below.
-Maksure you follow everysingle step outlined in various READMEs of this repository.
+Maksure you follow every single step outlined in various READMEs of this repository.
 
 # Hardware Requirements:
 1. Nvidia Jetson Series (Xavier, Nano, TX2 ONLY)
