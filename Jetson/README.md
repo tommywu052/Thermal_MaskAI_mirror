@@ -9,11 +9,22 @@
 2. Make sure your Jetson Device is connected to the internet (cable preferably, WiFi not advised), and on the upper right set powermode to 0: MAXN
 3. Open up ubuntu Terminal on our Jetson Device
 4. **sudo nano /etc/docker/daemon.json**
-5. add **"default-runtime": "nvidia"**
+5. add **"default-runtime": "nvidia"** so the whole thing looks like:
+```json
+{
+    "default-runtime": "nvidia",
+    "runtimes": {
+        "nvidia": {
+            "path": "nvidia-container-runtime",
+            "runtimeArgs": []
+        }
+    }
+}
+```
 6. **sudo systemctl restart docker**
 7. Copy repository's entire "AI_AICare" folder into **/home/{$user}/**
 8. **cd /home/{$user}/AI_AICare**
-9. **sudo docker login {Login Server}**, and input your **{Username}** and **{Password}** when prompted
+9.  **sudo docker login {Login Server}**, and input your **{Username}** and **{Password}** when prompted
 10. **sudo docker build -t {Login Server}/{image_name_of_your_choice} .**
 11. **sudo docker push {Login Server}/{image_name_of_your_choice}**
 
