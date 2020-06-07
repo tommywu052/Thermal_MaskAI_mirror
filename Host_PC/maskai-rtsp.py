@@ -108,7 +108,7 @@ def gen():
     #######################################
     #Read from usb webcam
     #######################################
-    cap = VideoCapture("rtsp://your URL")
+    cap = ipcamCapture("rtsp://your URL")
     #cap = ipcamCapture(0)
 
     # thread frame start
