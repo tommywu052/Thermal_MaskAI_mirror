@@ -28,3 +28,6 @@
 ![Detection In Action](/media/Detection_In_Action_2.jpg)
 
 # IMPORTANT: make sure your thermal camera is set to output "uint16" thermal data array
+
+# Step 6: (On Host PC): Execute Image & Thermal acquisition python code (this is for Theraml device which has RTSP stream)
+1. Make sure your Jetson device is up and running and execute **"python maskai-rtsp.py"** using command line interface
