@@ -31,3 +31,4 @@
 
 # Step 6: (On Host PC): Execute Image & Thermal acquisition python code (this is for Theraml device which has RTSP stream)
 1. Make sure your Jetson device is up and running and execute **"python maskai-rtsp.py"** using command line interface
+![sample detection](/media/2020-06-07_163553.jpg)
